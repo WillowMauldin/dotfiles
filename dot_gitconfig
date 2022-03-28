@@ -1,0 +1,28 @@
+[user]
+	email = sam@mauldin.me
+	name = Sam Mauldin
+
+[diff]
+	tool = kitty
+	guitool = kitty.gui
+[difftool]
+	prompt = false
+	trustExitCode = true
+[difftool "kitty"]
+	cmd = kitty +kitten diff $LOCAL $REMOTE
+[difftool "kitty.gui"]
+	cmd = kitty kitty +kitten diff $LOCAL $REMOTE
+
+[pull]
+	ff = only
+
+[push]
+	default = current
+
+[branch]
+	autosetupmerge = always
+	autosetuprebase = always
+
+[core]
+	hooksPath = /dev/null
+	excludesfile = ~/.gitignore
