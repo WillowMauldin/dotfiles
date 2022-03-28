@@ -19,6 +19,9 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'prettier/vim-prettier'
+Plug 'neovim/nvim-lspconfig'
+Plug 'hashivim/vim-terraform'
 Plug 'dyng/ctrlsf.vim'
 Plug 'sainnhe/everforest'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -46,4 +49,16 @@ require('nvim-treesitter.configs').setup {
     enable = true, -- false will disable the whole extension
   },
 }
+EOF
+
+" Prettier
+let g:prettier#quickfix_enabled = 0
+let g:prettier#config#config_precedence = 'prefer-file'
+
+" NERDTree
+let NERDTreeShowHidden = 1
+
+" LSP
+lua << EOF
+require'lspconfig'.tsserver.setup{}
 EOF
