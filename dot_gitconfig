@@ -22,7 +22,3 @@
 [branch]
 	autosetupmerge = always
 	autosetuprebase = always
-
-[core]
-	hooksPath = /dev/null
-	excludesfile = ~/.gitignore
