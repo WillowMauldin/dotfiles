@@ -21,6 +21,7 @@ Plug 'preservim/nerdtree'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'dyng/ctrlsf.vim'
 Plug 'sainnhe/everforest'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
 
@@ -35,3 +36,14 @@ let g:everforest_background = 'hard'
 let g:everforest_better_performance = 1
 
 colorscheme everforest
+
+" Treesitter
+lua << EOF
+require('nvim-treesitter.configs').setup {
+  ensure_installed = { "typescript" },
+
+  highlight = {
+    enable = true, -- false will disable the whole extension
+  },
+}
+EOF
