@@ -2,7 +2,6 @@ set autoindent
 set hlsearch
 set autoindent
 set colorcolumn=80,120
-highlight ColorColumn ctermbg=0238
 set diffopt+=vertical
 set nojoinspaces
 set ic
@@ -23,7 +22,7 @@ Plug 'prettier/vim-prettier'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hashivim/vim-terraform'
 Plug 'dyng/ctrlsf.vim'
-Plug 'sainnhe/everforest'
+Plug 'morhetz/gruvbox'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
@@ -36,9 +35,7 @@ endif
 set background=dark
 let g:everforest_background = 'hard'
 
-let g:everforest_better_performance = 1
-
-colorscheme everforest
+colorscheme gruvbox
 
 " Treesitter
 lua << EOF
