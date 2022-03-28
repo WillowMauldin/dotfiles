@@ -19,5 +19,6 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'dyng/ctrlsf.vim'
 
 call plug#end()
