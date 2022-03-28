@@ -24,6 +24,7 @@ Plug 'hashivim/vim-terraform'
 Plug 'dyng/ctrlsf.vim'
 Plug 'morhetz/gruvbox'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
