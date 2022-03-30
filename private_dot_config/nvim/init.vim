@@ -65,9 +65,6 @@ EOF
 let g:prettier#quickfix_enabled = 0
 let g:prettier#config#config_precedence = 'prefer-file'
 
-" NERDTree
-let NERDTreeShowHidden = 1
-
 " LSP & Completion
 set completeopt=menuone,noinsert,noselect
 
