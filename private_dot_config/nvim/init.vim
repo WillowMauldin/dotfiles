@@ -16,8 +16,8 @@ Plug 'vim-test/vim-test'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-surround'
-Plug 'preservim/nerdtree'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'lambdalisue/fern.vim'
 Plug 'prettier/vim-prettier'
 Plug 'hashivim/vim-terraform'
 Plug 'dyng/ctrlsf.vim'
@@ -25,6 +25,8 @@ Plug 'morhetz/gruvbox'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'junegunn/goyo.vim'
 Plug 'nvim-lualine/lualine.nvim'
+Plug 'antoinemadec/FixCursorHold.nvim'
+Plug 'ggandor/lightspeed.nvim'
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
