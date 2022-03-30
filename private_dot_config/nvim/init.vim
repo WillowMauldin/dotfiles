@@ -24,6 +24,7 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'morhetz/gruvbox'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'junegunn/goyo.vim'
+Plug 'nvim-lualine/lualine.nvim'
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
@@ -114,3 +115,12 @@ nnoremap <silent> g[ <cmd>lua vim.diagnostic.goto_prev()<CR>
 nnoremap <silent> g] <cmd>lua vim.diagnostic.goto_next()<CR>
 
 set signcolumn=yes
+
+" Statusline
+lua << EOF
+require('lualine').setup {
+  options = {
+    icons_enabled = false,
+  },
+}
+EOF
