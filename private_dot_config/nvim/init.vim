@@ -74,6 +74,7 @@ set completeopt=menuone,noinsert,noselect
 lua << EOF
 require'lspconfig'.tsserver.setup{}
 require'lspconfig'.rust_analyzer.setup({})
+require'lspconfig'.pyright.setup{}
 
 local cmp = require'cmp'
 cmp.setup({
