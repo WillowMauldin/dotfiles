@@ -54,7 +54,7 @@ colorscheme gruvbox
 " Treesitter
 lua << EOF
 require('nvim-treesitter.configs').setup {
-  ensure_installed = { "typescript" },
+  ensure_installed = { "typescript", "prisma" },
 
   highlight = {
     enable = true, -- false will disable the whole extension
@@ -75,6 +75,7 @@ lua << EOF
 require'lspconfig'.tsserver.setup{}
 require'lspconfig'.rust_analyzer.setup({})
 require'lspconfig'.pyright.setup{}
+require'lspconfig'.prismals.setup({})
 
 local cmp = require'cmp'
 cmp.setup({
