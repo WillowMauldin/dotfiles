@@ -19,7 +19,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'lambdalisue/fern.vim'
 Plug 'prettier/vim-prettier'
 Plug 'hashivim/vim-terraform'
-Plug 'morhetz/gruvbox'
+Plug 'fenetikm/falcon'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'junegunn/goyo.vim'
 Plug 'nvim-lualine/lualine.nvim'
@@ -45,7 +45,7 @@ endif
 
 set background=dark
 
-colorscheme gruvbox
+colorscheme falcon
 
 " Treesitter
 lua << EOF
