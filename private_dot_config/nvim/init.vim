@@ -26,8 +26,6 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'ggandor/lightspeed.nvim'
 
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -74,6 +72,7 @@ require'lspconfig'.tsserver.setup{}
 require'lspconfig'.rust_analyzer.setup({})
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.prismals.setup({})
+require'lspconfig'.gopls.setup({})
 
 local cmp = require'cmp'
 cmp.setup({
