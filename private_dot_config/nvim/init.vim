@@ -133,7 +133,7 @@ EOF
 
 " Fuzzy Finding
 lua << EOF
-local actions = require('telescope_actions')
+local actions = require('telescope.actions')
 local telescope = require('telescope')
 telescope.load_extension('fzf')
 telescope.setup{
