@@ -108,25 +108,18 @@ cmp.setup({
 EOF
 
 " Code navigation shortcuts
-nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
-nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> gD    <cmd>Telescope lsp_definitions<CR>
 nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
-nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
-nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
-nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
-nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
-nnoremap <silent> gd    <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> 1gD   <cmd>Telescope lsp_type_definitions<CR>
+nnoremap <silent> gr    <cmd>Telescope lsp_references<CR>
+nnoremap <silent> g0    <cmd>Telescope document_symbol<CR>
+nnoremap <silent> gW    <cmd>Telescope workspace_symbols<CR>
+nnoremap <silent> gd    <cmd>Telescope definitions<CR>
 
 " Set updatetime for CursorHold
 " 300ms of no cursor movement to trigger CursorHold
 set updatetime=300
-" Show diagnostic popup on cursor hold
-autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
-
-" Goto previous/next diagnostic warning/error
-nnoremap <silent> g[ <cmd>lua vim.diagnostic.goto_prev()<CR>
-nnoremap <silent> g] <cmd>lua vim.diagnostic.goto_next()<CR>
 
 set signcolumn=yes
 
@@ -151,3 +144,4 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>fm <cmd>Telescope marks<cr>
 nnoremap <leader>fq <cmd>Telescope git_branches<cr>
 nnoremap <leader>fw <cmd>Telescope git_bcommits<cr>
+nnoremap <leader>fd <cmd>Telescope diagnostics<cr>
