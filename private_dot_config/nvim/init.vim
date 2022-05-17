@@ -14,13 +14,11 @@ Plug 'https://git.sr.ht/~willdurand/srht.vim'
 
 Plug 'vim-test/vim-test'
 Plug 'pbrisbin/vim-mkdir'
-Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-surround'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'lambdalisue/fern.vim'
 Plug 'prettier/vim-prettier'
 Plug 'hashivim/vim-terraform'
-Plug 'dyng/ctrlsf.vim'
 Plug 'morhetz/gruvbox'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'junegunn/goyo.vim'
