@@ -133,7 +133,18 @@ EOF
 
 " Fuzzy Finding
 lua << EOF
-require('telescope').load_extension('fzf')
+local actions = require('telescope_actions')
+local telescope = require('telescope')
+telescope.load_extension('fzf')
+telescope.setup{
+  defaults = {
+    mappings = {
+      i = {
+        ["<esc>"] = actions.close
+      }
+    }
+  }
+}
 EOF
 
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
@@ -144,3 +155,4 @@ nnoremap <leader>fm <cmd>Telescope marks<cr>
 nnoremap <leader>fq <cmd>Telescope git_branches<cr>
 nnoremap <leader>fw <cmd>Telescope git_bcommits<cr>
 nnoremap <leader>fd <cmd>Telescope diagnostics<cr>
+nnoremap <leader>fr <cmd>Telescope registers<cr>
