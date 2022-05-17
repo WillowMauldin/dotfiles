@@ -108,13 +108,13 @@ EOF
 
 " Code navigation shortcuts
 nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
-nnoremap <silent> gD    <cmd>Telescope lsp_definitions<CR>
+nnoremap <silent> gD    <cmd>Telescope lsp_implementations<CR>
 nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> 1gD   <cmd>Telescope lsp_type_definitions<CR>
 nnoremap <silent> gr    <cmd>Telescope lsp_references<CR>
 nnoremap <silent> g0    <cmd>Telescope document_symbol<CR>
 nnoremap <silent> gW    <cmd>Telescope workspace_symbols<CR>
-nnoremap <silent> gd    <cmd>Telescope definitions<CR>
+nnoremap <silent> gd    <cmd>Telescope lsp_definitions<CR>
 
 " Set updatetime for CursorHold
 " 300ms of no cursor movement to trigger CursorHold
