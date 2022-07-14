@@ -75,6 +75,7 @@ require'lspconfig'.rust_analyzer.setup({})
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.prismals.setup({})
 require'lspconfig'.gopls.setup({})
+require'lspconfig'.slint_lsp.setup{}
 
 local cmp = require'cmp'
 cmp.setup({
