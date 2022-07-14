@@ -6,6 +6,8 @@ set diffopt+=vertical
 set nojoinspaces
 set ic
 
+let mapleader = " "
+
 call plug#begin()
 
 Plug 'tpope/vim-fugitive'
