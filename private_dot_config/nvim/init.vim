@@ -37,6 +37,7 @@ Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'stevearc/dressing.nvim'
 
 call plug#end()
 
@@ -68,6 +69,8 @@ let g:prettier#config#config_precedence = 'prefer-file'
 
 " LSP & Completion
 set completeopt=menuone,noinsert,noselect
+
+nnoremap <leader>rn	<cmd>lua vim.lsp.buf.rename()<CR>
 
 lua << EOF
 require'lspconfig'.tsserver.setup{}
@@ -118,6 +121,7 @@ nnoremap <silent> gr    <cmd>Telescope lsp_references<CR>
 nnoremap <silent> g0    <cmd>Telescope document_symbol<CR>
 nnoremap <silent> gW    <cmd>Telescope workspace_symbols<CR>
 nnoremap <silent> gd    <cmd>Telescope lsp_definitions<CR>
+nnoremap <silent> ga	<cmd>lua vim.lsp.buf.code_action()<CR>
 
 " Set updatetime for CursorHold
 " 300ms of no cursor movement to trigger CursorHold
@@ -159,3 +163,5 @@ nnoremap <leader>fq <cmd>Telescope git_branches<cr>
 nnoremap <leader>fw <cmd>Telescope git_bcommits<cr>
 nnoremap <leader>fd <cmd>Telescope diagnostics<cr>
 nnoremap <leader>fr <cmd>Telescope registers<cr>
+
+autocmd User TelescopePreviewerLoaded setlocal wrap
