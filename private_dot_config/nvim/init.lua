@@ -1,46 +1,55 @@
-set autoindent
-set hlsearch
-set autoindent
-set colorcolumn=80,120
-set diffopt+=vertical
-set nojoinspaces
-set ic
+-- Lazy auto-install
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
-let mapleader = " "
+require("lazy").setup({
+  "tpope/vim-fugitive",
+  "tpope/vim-rhubarb",
+  "https://git.sr.ht/~willdurand/srht.vim",
+  "vim-test/vim-test",
+  "pbrisbin/vim-mkdir",
+  "tpope/vim-surround",
+  "AndrewRadev/splitjoin.vim",
+  "lambdalisue/fern.vim",
+  "prettier/vim-prettier",
+  "hashivim/vim-terraform",
+  "morhetz/gruvbox",
+  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+  "junegunn/goyo.vim",
+  "nvim-lualine/lualine.nvim",
+  "antoinemadec/FixCursorHold.nvim",
+  "ggandor/lightspeed.nvim",
+  "neovim/nvim-lspconfig",
+  "hrsh7th/nvim-cmp",
+  "hrsh7th/cmp-nvim-lsp",
+  "L3MON4D3/LuaSnip",
+  "saadparwaiz1/cmp_luasnip",
+  "nvim-lua/plenary.nvim",
+  "nvim-telescope/telescope.nvim",
+  { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+  "stevearc/dressing.nvim"
+})
 
-call plug#begin()
+vim.opt.hlsearch = true
+vim.opt.autoindent = true
+vim.opt.colorcolumn={80,120}
+vim.opt.diffopt = vim.opt.diffopt + "vertical"
+vim.opt.joinspaces = false
+vim.opt.ic = true
 
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb'
-Plug 'https://git.sr.ht/~willdurand/srht.vim'
+vim.g.mapleader = " "
 
-Plug 'vim-test/vim-test'
-Plug 'pbrisbin/vim-mkdir'
-Plug 'tpope/vim-surround'
-Plug 'AndrewRadev/splitjoin.vim'
-Plug 'lambdalisue/fern.vim'
-Plug 'prettier/vim-prettier'
-Plug 'hashivim/vim-terraform'
-Plug 'morhetz/gruvbox'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'junegunn/goyo.vim'
-Plug 'nvim-lualine/lualine.nvim'
-Plug 'antoinemadec/FixCursorHold.nvim'
-Plug 'ggandor/lightspeed.nvim'
-
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'L3MON4D3/LuaSnip'
-Plug 'saadparwaiz1/cmp_luasnip'
-
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-Plug 'stevearc/dressing.nvim'
-
-call plug#end()
-
+vim.cmd [[
 " Color Scheme
 if has('termguicolors')
   set termguicolors
@@ -165,3 +174,4 @@ nnoremap <leader>fd <cmd>Telescope diagnostics<cr>
 nnoremap <leader>fr <cmd>Telescope registers<cr>
 
 autocmd User TelescopePreviewerLoaded setlocal wrap
+]]
