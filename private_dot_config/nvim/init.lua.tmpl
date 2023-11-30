@@ -71,7 +71,9 @@ require('nvim-treesitter.configs').setup {
 EOF
 
 " Prettier
+{{- if ne .chezmoi.hostname "Sam-Mauldin-WPNP49J0FF" }}
 let g:prettier#autoformat = 1
+{{- end }}
 let g:prettier#autoformat_require_pragma = 0
 
 let g:prettier#config#config_precedence = 'prefer-file'
