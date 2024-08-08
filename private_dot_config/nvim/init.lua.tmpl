@@ -20,14 +20,13 @@ require("lazy").setup({
   "pbrisbin/vim-mkdir",
   "tpope/vim-surround",
   "AndrewRadev/splitjoin.vim",
-  "lambdalisue/fern.vim",
+  "lambdalisue/vim-fern",
   "prettier/vim-prettier",
   "hashivim/vim-terraform",
   "morhetz/gruvbox",
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
   "junegunn/goyo.vim",
   "nvim-lualine/lualine.nvim",
-  "antoinemadec/FixCursorHold.nvim",
   "ggandor/lightspeed.nvim",
   "neovim/nvim-lspconfig",
   "hrsh7th/nvim-cmp",
@@ -174,6 +173,8 @@ nnoremap <leader>fq <cmd>Telescope git_branches<cr>
 nnoremap <leader>fw <cmd>Telescope git_bcommits<cr>
 nnoremap <leader>fd <cmd>Telescope diagnostics<cr>
 nnoremap <leader>fr <cmd>Telescope registers<cr>
+
+nnoremap <leader><leader> <cmd>Fern . -reveal=%<CR>
 
 autocmd User TelescopePreviewerLoaded setlocal wrap
 ]]
