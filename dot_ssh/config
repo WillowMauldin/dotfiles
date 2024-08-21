@@ -1,0 +1,18 @@
+Host fluidgolf
+	HostName dev.fluid.golf
+	User ec2-user
+
+Host twinleaf
+	HostName twinleaf.mauldin.me
+	Port 2222
+	User sam
+
+Host twinleaf-proxy
+	HostName twinleaf.mauldin.me
+	Port 2222
+	User sam
+	DynamicForward 1330
+
+Host router
+	HostName 10.0.0.1
+	User sam
