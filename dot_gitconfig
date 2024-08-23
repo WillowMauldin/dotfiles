@@ -19,7 +19,14 @@
 
 [push]
 	default = current
+	autosetupremote = true
 
 [branch]
 	autosetupmerge = always
 	autosetuprebase = always
+
+[merge]
+	conflictstyle = "zdiff3"
+
+[rebase]
+	autosquash = true
