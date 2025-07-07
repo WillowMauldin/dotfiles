@@ -83,12 +83,10 @@ set completeopt=menuone,noinsert,noselect
 nnoremap <leader>rn	<cmd>lua vim.lsp.buf.rename()<CR>
 
 lua << EOF
-require'lspconfig'.tsserver.setup{}
+require'lspconfig'.ts_ls.setup{}
 require'lspconfig'.rust_analyzer.setup({})
 require'lspconfig'.pyright.setup{}
-require'lspconfig'.prismals.setup({})
 require'lspconfig'.gopls.setup({})
-require'lspconfig'.slint_lsp.setup{}
 
 local cmp = require'cmp'
 cmp.setup({
