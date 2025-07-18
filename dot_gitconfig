@@ -30,3 +30,6 @@
 
 [rebase]
 	autosquash = true
+
+[core]
+	editor = nvim
