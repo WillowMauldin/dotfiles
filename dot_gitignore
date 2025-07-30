@@ -1,3 +1,4 @@
 .vscode/
 .devcontainer/
 .DS_Store
+.crush/
