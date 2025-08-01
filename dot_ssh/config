@@ -13,6 +13,11 @@ Host twinleaf-proxy
 	User willow
 	DynamicForward 1330
 
+Host arceus
+	HostName twinleaf.mauldin.me
+	User willow
+	Port 2223
+
 Host router
 	HostName 10.0.0.1
 	Port 2222
