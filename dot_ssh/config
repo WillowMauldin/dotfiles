@@ -1,9 +1,3 @@
-Host fluidgolf
-	HostName dev.fluid.golf
-	User ec2-user
-	StrictHostKeyChecking no
-	UserKnownHostsFile=/dev/null
-
 Host twinleaf
 	HostName twinleaf.mauldin.me
 	User willow
@@ -12,11 +6,6 @@ Host twinleaf-proxy
 	HostName twinleaf.mauldin.me
 	User willow
 	DynamicForward 1330
-
-Host arceus
-	HostName twinleaf.mauldin.me
-	User willow
-	Port 2223
 
 Host router
 	HostName 10.11.12.1
