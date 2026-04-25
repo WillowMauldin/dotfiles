@@ -1,6 +1,7 @@
 Host twinleaf
 	HostName twinleaf.mauldin.me
 	User willow
+  ForwardAgent yes
 
 Host twinleaf-proxy
 	HostName twinleaf.mauldin.me
